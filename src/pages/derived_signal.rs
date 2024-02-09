@@ -1,9 +1,9 @@
 use leptos::*;
 
-use crate::progress_bar::ProgressBar;
+use crate::components::progress_bar::ProgressBar;
 
 #[component]
-pub fn DerivedSignalExample() -> impl IntoView {
+pub fn DerivedSignalPage() -> impl IntoView {
     let (count, set_count) = create_signal(0);
     let increment = move |_| set_count.update(|count| *count += 1);
     let double_count = move || count.get() * 2;
