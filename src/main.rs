@@ -15,6 +15,7 @@ use crate::{
 use leptos::*;
 
 fn main() {
+    let a = 1;
     console_error_panic_hook::set_once();
     mount_to_body(|| {
         view! {
