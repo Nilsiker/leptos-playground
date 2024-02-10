@@ -1,4 +1,4 @@
-use leptos::{html::Summary, *};
+use leptos::*;
 
 #[component]
 pub fn NumericInput() -> impl IntoView {
@@ -11,7 +11,7 @@ pub fn NumericInput() -> impl IntoView {
             <summary>Error handling</summary>
             <label>
                 "Type a number (or something that's not a number!)"
-                <input type="number" on:input=on_input/>
+                <input type="text" on:input=on_input/>
                 // the fallback receives a signal containing current errors
                 <ErrorBoundary fallback=|errors| {
                     view! {
@@ -25,7 +25,7 @@ pub fn NumericInput() -> impl IntoView {
                                         .into_iter()
                                         .map(|(_, e)| view! { <li>{e.to_string()}</li> })
                                         .collect_view()
-                                // }}
+                                }}
 
                             </ul>
                         </div>

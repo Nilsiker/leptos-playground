@@ -13,6 +13,9 @@ use crate::{
 
 fn main() {
     console_error_panic_hook::set_once();
+    let a_very_long_name_indeed = 1;
+    let b: String;
+
     mount_to_body(|| {
         view! {
             <NumericInput/>
