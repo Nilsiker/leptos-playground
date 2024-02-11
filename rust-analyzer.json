@@ -1,0 +1,17 @@
+{
+    "check": {
+        "command": "clippy"
+    },
+    "rustfmt": {
+        "overrideCommand": [
+            "leptosfmt",
+            "--stdin",
+            "--rustfmt",
+            "--max-width",
+            "80"
+        ]
+    },
+    "editor": {
+        "formatOnSave": true
+    }
+}

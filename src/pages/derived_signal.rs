@@ -11,7 +11,10 @@ pub fn DerivedSignalPage() -> impl IntoView {
         <details>
             <summary>Derived Signals</summary>
             <p>
-                <button on:click=increment class:red=move || count.get() % 2 == 1>
+                <button
+                    on:click=increment
+                    class:red=move || count.get() % 2 == 1
+                >
                     "Click me "
                     {count}
                 </button>

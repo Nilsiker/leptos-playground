@@ -7,8 +7,13 @@ pub fn ShowPage() -> impl IntoView {
     view! {
         <details>
             <summary>Show</summary>
-            <button on:click=move |_| set_value.update(|value| *value += 1)>+</button>
-            <Show when=move || { value.get() > 5 } fallback=|| view! { <p>Small</p> }>
+            <button on:click=move |_| {
+                set_value.update(|value| *value += 1)
+            }>+</button>
+            <Show
+                when=move || { value.get() > 5 }
+                fallback=|| view! { <p>Small</p> }
+            >
                 <p>BIG</p>
             </Show>
         </details>

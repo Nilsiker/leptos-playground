@@ -54,7 +54,14 @@ pub fn ForExample() -> impl IntoView {
                     }
                 />
 
-                <div>{data.get().clone().into_iter().map(|el| el.value).collect_view()}</div>
+                <div>
+                    {data
+                        .get()
+                        .clone()
+                        .into_iter()
+                        .map(|el| el.value)
+                        .collect_view()}
+                </div>
             </div>
         </details>
     }
