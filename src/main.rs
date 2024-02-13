@@ -9,8 +9,9 @@ use crate::{
         select::Select, text_area::TextArea, uncontrolled_form::UncontrolledForm,
     },
     pages::{
-        communication::CommunicationPage, derived_signal::DerivedSignalPage,
-        numeric_input::NumericInput, show::ShowPage,
+        children::ChildrenPage, communication::CommunicationPage,
+        derived_signal::DerivedSignalPage, numeric_input::NumericInput, show::ShowPage,
+        working_with_signals::WorkingWithSignalsPage,
     },
 };
 
@@ -19,6 +20,8 @@ fn main() {
 
     mount_to_body(|| {
         view! {
+            <WorkingWithSignalsPage/>
+            <ChildrenPage/>
             <CommunicationPage/>
             <NumericInput/>
             <ShowPage/>
